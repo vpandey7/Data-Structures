@@ -4,13 +4,9 @@
  * @return {number}
  */
 var search = function (nums, target) {
-
     var left = 0;
     var right = nums.length - 1;
-    //var mid = Math.floor((left+right)/2);
     console.log(mid);
-
-
     while (left <= right) {
         var mid = Math.floor((left + right) / 2);
 
@@ -23,7 +19,4 @@ var search = function (nums, target) {
         }
     }
     return -1;
-
 };
-
-search([-1, 0, 3, 5, 9, 12], 12);

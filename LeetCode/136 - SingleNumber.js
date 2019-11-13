@@ -4,9 +4,7 @@
  */
 
 var singleNumber = function (nums) {
-
     let containsSet = new Set();
-
     for (var i = 0; i < nums.length; i++) {
         if (containsSet.has(nums[i])) {
             containsSet.delete(nums[i]);

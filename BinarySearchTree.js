@@ -56,6 +56,41 @@ class BinarySearchTree {
         return false;
 
     }
+
+    BreadthFirstSearch() {
+        let currentNode = this.root;
+        let list = [];
+        let queue = [];
+        queue.push(currentNode);
+        while (!queue.length) {
+            currentNode = queue.shift();
+            list.push(currentNode.value);
+            if (currentNode.left) {
+                queue.push(currentNode.left);
+            }
+            if (currentNode.right) {
+                queue.push(currentNode.right);
+            }
+        }
+        return list;
+    }
+
+    BreadthFirstSearchRecursive(queue, list) {
+        // queue would be root of the tree and lost would be an empty array. queue = [this.root] list = []
+        if (!queue.length) {
+            return list; // base case 
+        }
+        let currentNode = queue.shift();
+        list.push(currentNode.value);
+        if (currentNode.left) {
+            queue.push(currentNode.left);
+        }
+        if (currentNode.right) {
+            queue.push(currentNode.right);
+        }
+
+        return this.BreadthFirstSearchRecursive(queue, list);
+    }
 }
 
 
