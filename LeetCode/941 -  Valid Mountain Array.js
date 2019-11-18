@@ -18,4 +18,5 @@ var validMountainArray = function (A) {
     }
     return true;
 
+    
 };
